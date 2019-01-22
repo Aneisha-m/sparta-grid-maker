@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
+
   // Get Element by ID
   const board = document.getElementById("board");
   var row;
+
   // create grid Function
   function makeGrid(x) {
     for (let rows = 0; rows < x; rows++) {
@@ -12,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const column = document.createElement("div");
         column.setAttribute("class", "col");
         row.appendChild(column);
+
         //Random Color on mouseover event
         column.addEventListener("mouseover", function(e) {
         console.log(e.target);
@@ -28,6 +31,6 @@ document.addEventListener("DOMContentLoaded", function() {
     )},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
   }
 
-  makeGrid(5);
+  makeGrid(5); //input preferred gird size
   
 }); //END DOMCONTENTLOADED
